@@ -1,0 +1,27 @@
+# Use a slim Python image to keep the size small
+FROM python:3.10-slim
+
+# Set the working directory
+WORKDIR /app
+
+
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy your requirements file first to leverage Docker cache
+COPY requirements.txt .
+
+# Install dependencies
+# Make sure 'tensorflow-cpu' or 'tflite-runtime' is in your requirements.txt
+RUN pip install  -r requirements.txt
+
+# Copy the rest of your application code and your model
+COPY . .
+
+# Expose Streamlit's default port
+EXPOSE 8501
+
+# Run the application
+CMD ["streamlit", "run", "deploy.py"]
