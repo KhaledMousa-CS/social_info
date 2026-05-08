@@ -6,7 +6,7 @@ import base64
 from io import BytesIO
 
 # ─────────────────────────────────────────────
-# PAGE CONFIG
+# PAGE CONFIG 
 # ─────────────────────────────────────────────
 st.set_page_config(
     page_title="MRI Scan · Brain Tumor Detector",
@@ -296,7 +296,7 @@ CLASS_ICONS = ['🔴', '🟠', '🟢', '🟡']
 
 
 # ─────────────────────────────────────────────
-# MODEL
+# MODEL 
 # ─────────────────────────────────────────────
 @st.cache_resource
 def get_interpreter():
@@ -447,7 +447,7 @@ def render_card(img: Image.Image, probs: np.ndarray, scan_num: int, delay: float
 
 
 # ─────────────────────────────────────────────
-# RESULTS
+# RESULTS :- 
 # ─────────────────────────────────────────────
 if all_images:
     count = len(all_images)
