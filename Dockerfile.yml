@@ -1,7 +1,9 @@
+# simple solve error
 # Use a slim Python image to keep the size small
+
 FROM python:3.10-slim
 
-# Set the working directory
+# Set the working directory 
 WORKDIR /app
 
 
