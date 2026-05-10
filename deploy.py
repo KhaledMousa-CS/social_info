@@ -155,7 +155,7 @@ div[data-testid="stProgress"] {
   opacity: 0.25; margin: 18px 0;
 }
 
-/* ── RESULT CARD ───────────────────────────── */
+/* ── RESULT CARD ─────────────── */
 .result-card {
   background: var(--glass);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
